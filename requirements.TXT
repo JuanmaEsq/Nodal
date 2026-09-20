@@ -1,0 +1,6 @@
+streamlit
+pynitefea
+plotly
+google-genai
+pillow
+numpy
