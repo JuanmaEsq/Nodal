@@ -125,136 +125,66 @@ st.markdown("""
 # ==========================================================
 PLANTILLAS = {
     "1. Viga Simplemente Apoyada - Carga Puntual al Centro": {
-        "unidad_fuerza": "kN",
-        "unidad_longitud": "m",
-        "nodos": [
-            {"id": "N1", "x": 0.0, "y": 0.0},
-            {"id": "N2", "x": 6.0, "y": 0.0}
-        ],
+        "unidad_fuerza": "kN", "unidad_longitud": "m",
+        "nodos": [{"id": "N1", "x": 0.0, "y": 0.0}, {"id": "N2", "x": 6.0, "y": 0.0}],
         "rotulas": [],
-        "barras": [
-            {"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}
-        ],
-        "apoyos": [
-            {"nodo": "N1", "tipo": "fijo", "angulo": 0.0},
-            {"nodo": "N2", "tipo": "movil", "angulo": 0.0}
-        ],
+        "barras": [{"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}],
+        "apoyos": [{"nodo": "N1", "tipo": "fijo", "angulo": 0.0}, {"nodo": "N2", "tipo": "movil", "angulo": 0.0}],
         "cargas_distribuidas": [],
-        "cargas_puntuales": [
-            {"barra": "Barra1", "posicion_x": 3.0, "magnitud": 20.0, "direccion": "-Y", "angulo": 270.0}
-        ],
+        "cargas_puntuales": [{"barra": "Barra1", "posicion_x": 3.0, "magnitud": 20.0, "direccion": "-Y", "angulo": 270.0}],
         "momentos_concentrados": []
     },
     "2. Viga Simplemente Apoyada - Carga Distribuida Uniforme (q)": {
-        "unidad_fuerza": "kN",
-        "unidad_longitud": "m",
-        "nodos": [
-            {"id": "N1", "x": 0.0, "y": 0.0},
-            {"id": "N2", "x": 6.0, "y": 0.0}
-        ],
+        "unidad_fuerza": "kN", "unidad_longitud": "m",
+        "nodos": [{"id": "N1", "x": 0.0, "y": 0.0}, {"id": "N2", "x": 6.0, "y": 0.0}],
         "rotulas": [],
-        "barras": [
-            {"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}
-        ],
-        "apoyos": [
-            {"nodo": "N1", "tipo": "fijo", "angulo": 0.0},
-            {"nodo": "N2", "tipo": "movil", "angulo": 0.0}
-        ],
-        "cargas_distribuidas": [
-            {"barra": "Barra1", "w_inicio": 10.0, "w_fin": 10.0, "x_inicio": 0.0, "x_fin": 6.0, "direccion": "-Y"}
-        ],
-        "cargas_puntuales": [],
-        "momentos_concentrados": []
+        "barras": [{"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}],
+        "apoyos": [{"nodo": "N1", "tipo": "fijo", "angulo": 0.0}, {"nodo": "N2", "tipo": "movil", "angulo": 0.0}],
+        "cargas_distribuidas": [{"barra": "Barra1", "w_inicio": 10.0, "w_fin": 10.0, "x_inicio": 0.0, "x_fin": 6.0, "direccion": "-Y"}],
+        "cargas_puntuales": [], "momentos_concentrados": []
     },
     "3. Viga Simplemente Apoyada - Par / Momento Concentrado (M₀)": {
-        "unidad_fuerza": "kN",
-        "unidad_longitud": "m",
-        "nodos": [
-            {"id": "N1", "x": 0.0, "y": 0.0},
-            {"id": "N2", "x": 6.0, "y": 0.0}
-        ],
+        "unidad_fuerza": "kN", "unidad_longitud": "m",
+        "nodos": [{"id": "N1", "x": 0.0, "y": 0.0}, {"id": "N2", "x": 6.0, "y": 0.0}],
         "rotulas": [],
-        "barras": [
-            {"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}
-        ],
-        "apoyos": [
-            {"nodo": "N1", "tipo": "fijo", "angulo": 0.0},
-            {"nodo": "N2", "tipo": "movil", "angulo": 0.0}
-        ],
-        "cargas_distribuidas": [],
-        "cargas_puntuales": [],
-        "momentos_concentrados": [
-            {"barra": "Barra1", "posicion_x": 3.0, "magnitud": 25.0, "sentido": "horario"}
-        ]
+        "barras": [{"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}],
+        "apoyos": [{"nodo": "N1", "tipo": "fijo", "angulo": 0.0}, {"nodo": "N2", "tipo": "movil", "angulo": 0.0}],
+        "cargas_distribuidas": [], "cargas_puntuales": [],
+        "momentos_concentrados": [{"barra": "Barra1", "posicion_x": 3.0, "magnitud": 25.0, "sentido": "horario"}]
     },
     "4. Viga en Voladizo (Ménsula) - Carga Puntual en Extremo": {
-        "unidad_fuerza": "kN",
-        "unidad_longitud": "m",
-        "nodos": [
-            {"id": "N1", "x": 0.0, "y": 0.0},
-            {"id": "N2", "x": 3.0, "y": 0.0}
-        ],
+        "unidad_fuerza": "kN", "unidad_longitud": "m",
+        "nodos": [{"id": "N1", "x": 0.0, "y": 0.0}, {"id": "N2", "x": 3.0, "y": 0.0}],
         "rotulas": [],
-        "barras": [
-            {"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}
-        ],
-        "apoyos": [
-            {"nodo": "N1", "tipo": "empotrado", "angulo": 0.0}
-        ],
+        "barras": [{"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}],
+        "apoyos": [{"nodo": "N1", "tipo": "empotrado", "angulo": 0.0}],
         "cargas_distribuidas": [],
-        "cargas_puntuales": [
-            {"nodo": "N2", "magnitud": 15.0, "direccion": "-Y", "angulo": 270.0}
-        ],
+        "cargas_puntuales": [{"nodo": "N2", "magnitud": 15.0, "direccion": "-Y", "angulo": 270.0}],
         "momentos_concentrados": []
     },
     "5. Viga en Voladizo (Ménsula) - Carga Distribuida Uniforme": {
-        "unidad_fuerza": "kN",
-        "unidad_longitud": "m",
-        "nodos": [
-            {"id": "N1", "x": 0.0, "y": 0.0},
-            {"id": "N2", "x": 4.0, "y": 0.0}
-        ],
+        "unidad_fuerza": "kN", "unidad_longitud": "m",
+        "nodos": [{"id": "N1", "x": 0.0, "y": 0.0}, {"id": "N2", "x": 4.0, "y": 0.0}],
         "rotulas": [],
-        "barras": [
-            {"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}
-        ],
-        "apoyos": [
-            {"nodo": "N1", "tipo": "empotrado", "angulo": 0.0}
-        ],
-        "cargas_distribuidas": [
-            {"barra": "Barra1", "w_inicio": 8.0, "w_fin": 8.0, "x_inicio": 0.0, "x_fin": 4.0, "direccion": "-Y"}
-        ],
-        "cargas_puntuales": [],
-        "momentos_concentrados": []
+        "barras": [{"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}],
+        "apoyos": [{"nodo": "N1", "tipo": "empotrado", "angulo": 0.0}],
+        "cargas_distribuidas": [{"barra": "Barra1", "w_inicio": 8.0, "w_fin": 8.0, "x_inicio": 0.0, "x_fin": 4.0, "direccion": "-Y"}],
+        "cargas_puntuales": [], "momentos_concentrados": []
     },
     "6. Viga Continua de 2 Tramos Simétricos": {
-        "unidad_fuerza": "kN",
-        "unidad_longitud": "m",
-        "nodos": [
-            {"id": "N1", "x": 0.0, "y": 0.0},
-            {"id": "N2", "x": 4.0, "y": 0.0},
-            {"id": "N3", "x": 8.0, "y": 0.0}
-        ],
+        "unidad_fuerza": "kN", "unidad_longitud": "m",
+        "nodos": [{"id": "N1", "x": 0.0, "y": 0.0}, {"id": "N2", "x": 4.0, "y": 0.0}, {"id": "N3", "x": 8.0, "y": 0.0}],
         "rotulas": [],
-        "barras": [
-            {"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"},
-            {"id": "Barra2", "nodo_i": "N2", "nodo_j": "N3"}
-        ],
-        "apoyos": [
-            {"nodo": "N1", "tipo": "fijo", "angulo": 0.0},
-            {"nodo": "N2", "tipo": "movil", "angulo": 0.0},
-            {"nodo": "N3", "tipo": "movil", "angulo": 0.0}
-        ],
+        "barras": [{"id": "Barra1", "nodo_i": "N1", "nodo_j": "N2"}, {"id": "Barra2", "nodo_i": "N2", "nodo_j": "N3"}],
+        "apoyos": [{"nodo": "N1", "tipo": "fijo", "angulo": 0.0}, {"nodo": "N2", "tipo": "movil", "angulo": 0.0}, {"nodo": "N3", "tipo": "movil", "angulo": 0.0}],
         "cargas_distribuidas": [
             {"barra": "Barra1", "w_inicio": 12.0, "w_fin": 12.0, "x_inicio": 0.0, "x_fin": 4.0, "direccion": "-Y"},
             {"barra": "Barra2", "w_inicio": 12.0, "w_fin": 12.0, "x_inicio": 0.0, "x_fin": 4.0, "direccion": "-Y"}
         ],
-        "cargas_puntuales": [],
-        "momentos_concentrados": []
+        "cargas_puntuales": [], "momentos_concentrados": []
     },
     "7. Pórtico Biarticulado con Carga Lateral y Gravitatoria": {
-        "unidad_fuerza": "kN",
-        "unidad_longitud": "m",
+        "unidad_fuerza": "kN", "unidad_longitud": "m",
         "nodos": [
             {"id": "N1", "x": 0.0, "y": 0.0},
             {"id": "N2", "x": 0.0, "y": 3.0},
@@ -267,16 +197,9 @@ PLANTILLAS = {
             {"id": "Barra2", "nodo_i": "N2", "nodo_j": "N3"},
             {"id": "Barra3", "nodo_i": "N3", "nodo_j": "N4"}
         ],
-        "apoyos": [
-            {"nodo": "N1", "tipo": "fijo", "angulo": 0.0},
-            {"nodo": "N4", "tipo": "fijo", "angulo": 0.0}
-        ],
-        "cargas_distribuidas": [
-            {"barra": "Barra2", "w_inicio": 10.0, "w_fin": 10.0, "x_inicio": 0.0, "x_fin": 5.0, "direccion": "-Y"}
-        ],
-        "cargas_puntuales": [
-            {"nodo": "N2", "magnitud": 15.0, "direccion": "+X", "angulo": 0.0}
-        ],
+        "apoyos": [{"nodo": "N1", "tipo": "fijo", "angulo": 0.0}, {"nodo": "N4", "tipo": "fijo", "angulo": 0.0}],
+        "cargas_distribuidas": [{"barra": "Barra2", "w_inicio": 10.0, "w_fin": 10.0, "x_inicio": 0.0, "x_fin": 5.0, "direccion": "-Y"}],
+        "cargas_puntuales": [{"nodo": "N2", "magnitud": 15.0, "direccion": "+X", "angulo": 0.0}],
         "momentos_concentrados": []
     }
 }
@@ -343,7 +266,6 @@ def rotar_coordenadas(xs, ys, ang_deg):
 
 def dibujar_esquema_perfil(tipo_familia, nombre_perfil, orientacion_deg):
     fig = go.Figure()
-    
     if "IPN" in tipo_familia or "IPE" in tipo_familia:
         x_pts = [-3.5, 3.5, 3.5, 0.7, 0.7, 3.5, 3.5, -3.5, -3.5, -0.7, -0.7, -3.5, -3.5]
         y_pts = [5.0, 5.0, 3.8, 3.8, -3.8, -3.8, -5.0, -5.0, -3.8, -3.8, 3.8, 3.8, 5.0]
@@ -381,8 +303,7 @@ def dibujar_esquema_perfil(tipo_familia, nombre_perfil, orientacion_deg):
         paper_bgcolor="#0f172a", plot_bgcolor="#0f172a",
         xaxis=dict(range=[-7, 7], visible=False, scaleanchor="y", scaleratio=1),
         yaxis=dict(range=[-7, 7], visible=False),
-        margin=dict(l=5, r=5, t=5, b=5),
-        height=190, showlegend=False
+        margin=dict(l=5, r=5, t=5, b=5), height=190, showlegend=False
     )
     return fig
 
@@ -401,7 +322,7 @@ v_act = st.session_state.version_estructura
 # SIDEBAR
 # ==========================================================
 with st.sidebar:
-    st.markdown("### ⚙️ Configuración")
+    st.markdown("### ⚙ Configuración")
     
     api_key_input = st.text_input(
         "Google AI Studio API Key",
@@ -444,7 +365,7 @@ with st.sidebar:
         iz_sec_val = iz_activa
         wz_sec_val = wz_activa
         kg_m_val = prop["kg_m"]
-        st.caption(f"ℹ️ **Activo ({eje_str}):** Iz = {iz_sec_val} cm⁴ | Wz = {wz_sec_val} cm³ | A = {area_sec_val} cm²")
+        st.caption(f"ℹ️️ **Activo ({eje_str}):** Iz = {iz_sec_val} cm⁴ | Wz = {wz_sec_val} cm³ | A = {area_sec_val} cm²")
     else:
         designacion_sel = "Manual"
         orientacion_deg = st.selectbox("Orientación del perfil:", [0, 90, 180, 270])
@@ -475,9 +396,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ==========================================================
-# GUÍA DE USO RÁPIDA
-# ==========================================================
+# Guía de Uso
 with st.expander("📖 ¿Cómo usar Nodal? · Guía rápida de uso", expanded=False):
     col_guia1, col_guia2 = st.columns(2)
     with col_guia1:
@@ -496,12 +415,11 @@ with st.expander("📖 ¿Cómo usar Nodal? · Guía rápida de uso", expanded=Fa
         **3. Ajustar en el Inspector de Propiedades**
         * **Nodos y Apoyos:** Modificá coordenadas ($X, Y$) y configurá apoyos orientables en cualquier ángulo sexagesimal (medido desde el eje $+X$ en sentido antihorario).
         * **Barras:** Conectá los nodos asegurando la continuidad del modelo.
-        * **Cargas y Momentos:** Agregá solicitaciones distribuidas o puntuales indicando posición local, ángulo y sentido de la flecha.
+        * **Cargas y Momentos:** Agregá solicitaciones distribuidas o puntuales. Ahora podés asignar cargas distribuidas **directamente de nudo a nudo**.
 
-        **4. Calcular y exportar diagramas**
-        * Presioná **🖩 Calcular** para resolver la matriz de rigidez y ver los diagramas de $M$, $Q$, $N$, la elástica deformada y los vectores reactivos.
-        * Los momentos flectores ($M$) se grafican del lado de las fibras traccionadas (convención FTool/ingeniería).
-        * Podés descargar cualquier diagrama en formato PNG pasando el cursor por encima del gráfico y haciendo clic en el ícono de la cámara 📷.
+        **4. Calcular y consultar esfuerzos**
+        * Presioná **🖩 Calcular** para ver los diagramas de $M$, $Q$, $N$, la elástica deformada y los vectores reactivos.
+        * Usá el calculador de esfuerzos puntual para consultar valores exactos en cualquier coordenada $(X, Y)$ del plano.
         """)
 
 # ==========================================================
@@ -684,9 +602,9 @@ def dibujar_vinculo_orientable(fig, x0, y0, tipo, angulo_deg, L_max):
         ))
         
         c1_x = x0 + 1.05 * s * v_ground_x - 0.35 * s * v_tan_x
-        c1_y = y0 + 1.05 * s * v_ground_y - 0.35 * s * v_tan_y
+        c1_y = y0 + 1.05 * s * v_ground_x - 0.35 * s * v_tan_y
         c2_x = x0 + 1.05 * s * v_ground_x + 0.35 * s * v_tan_x
-        c2_y = y0 + 1.05 * s * v_ground_y + 0.35 * s * v_tan_y
+        c2_y = y0 + 1.05 * s * v_ground_x + 0.35 * s * v_tan_y
         
         fig.add_trace(go.Scatter(
             x=[c1_x, c2_x], y=[c1_y, c2_y],
@@ -856,7 +774,7 @@ def agregar_cargas_graficas(fig, datos, nodos_dict, L_max):
             )
 
 # ==========================================================
-# GENERADOR DEL ESQUEMA EN VIVO
+# GENERADOR DEL ESQUEMA EN VIVO (ZOOM SIN DESENCAJE)
 # ==========================================================
 def crear_esquema_modelo(datos):
     fig = go.Figure()
@@ -871,21 +789,18 @@ def crear_esquema_modelo(datos):
         )
         fig.update_layout(
             paper_bgcolor="#0f172a", plot_bgcolor="#0f172a",
-            xaxis=dict(range=[-1, 6], showgrid=True, gridcolor="#1e293b", zeroline=True, zerolinecolor="#334155"),
-            yaxis=dict(range=[-1, 4], showgrid=True, gridcolor="#1e293b", zeroline=True, zerolinecolor="#334155"),
-            margin=dict(l=10, r=10, t=10, b=10), height=430
+            dragmode="pan",
+            transition={'duration': 0},
+            xaxis=dict(range=[-1, 6], showgrid=True, gridcolor="#1e293b", zeroline=True, zerolinecolor="#334155", fixedrange=False),
+            yaxis=dict(range=[-1, 4], showgrid=True, gridcolor="#1e293b", zeroline=True, zerolinecolor="#334155", scaleanchor="x", scaleratio=1, fixedrange=False),
+            margin=dict(l=10, r=10, t=10, b=10), height=440
         )
         return fig
 
     xs = [x for x, y in nodos_dict.values()]
     ys = [y for x, y in nodos_dict.values()]
     L_max = max(max(xs) - min(xs), max(ys) - min(ys), 1.0)
-
     pad = 0.35 * L_max
-    fig.add_trace(go.Scatter(
-        x=[min(xs) - pad, max(xs) + pad], y=[min(ys) - pad, max(ys) + pad],
-        mode='markers', marker=dict(size=0.1, opacity=0), hoverinfo='skip', showlegend=False
-    ))
 
     for b in datos.get("barras", []):
         if b["nodo_i"] in nodos_dict and b["nodo_j"] in nodos_dict:
@@ -926,12 +841,23 @@ def crear_esquema_modelo(datos):
     fig.update_layout(
         paper_bgcolor="#0f172a", plot_bgcolor="#0f172a",
         font=dict(color="#e2e8f0"),
-        xaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, scaleanchor="y", scaleratio=1),
-        yaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False),
+        dragmode="pan",
+        uirevision="fijo",
+        transition={'duration': 0},
+        xaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, range=[min(xs) - pad, max(xs) + pad], fixedrange=False),
+        yaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, scaleanchor="x", scaleratio=1, range=[min(ys) - pad, max(ys) + pad], fixedrange=False),
         margin=dict(l=10, r=10, t=10, b=10),
-        height=430, showlegend=False
+        height=440, showlegend=False
     )
     return fig
+
+config_canvas = {
+    "scrollZoom": True,
+    "displayModeBar": True,
+    "modeBarButtonsToRemove": ["lasso2d", "select2d"],
+    "displaylogo": False,
+    "toImageButtonOptions": {"format": "png", "filename": "nodal_estructura", "height": 720, "width": 1280, "scale": 2}
+}
 
 # ==========================================================
 # SECCIÓN 1: INGESTA / SELECCIÓN
@@ -1001,7 +927,7 @@ with tab_ia:
                         st.error(f"Falla en visión: {err_ia}")
 
 # ==========================================================
-# SECCIÓN 2: MODELO E INSPECTOR INTUITIVO (CLAVES DINÁMICAS)
+# SECCIÓN 2: MODELO E INSPECTOR INTUITIVO
 # ==========================================================
 st.markdown("---")
 st.markdown('<div class="step-badge">2. Editor de Elementos e Inspector de Propiedades</div>', unsafe_allow_html=True)
@@ -1160,9 +1086,15 @@ with col_inspector:
             
             if st.button("➕ Agregar Carga Distribuida (q)", use_container_width=True, key=f"btn_add_cd_{v_act}"):
                 if lista_barras:
+                    b0 = datos["barras"][0]
+                    nodos_d = {n["id"]: (float(n["x"]), float(n["y"])) for n in datos.get("nodos", [])}
+                    x1, y1 = nodos_d.get(b0["nodo_i"], (0, 0))
+                    x2, y2 = nodos_d.get(b0["nodo_j"], (5, 0))
+                    l_def = math.hypot(x2 - x1, y2 - y1) or 5.0
+                    
                     datos["cargas_distribuidas"].append({
-                        "barra": lista_barras[0], "w_inicio": 10.0, "w_fin": 10.0, 
-                        "x_inicio": 0.0, "x_fin": 5.0, "direccion": "-Y"
+                        "barra": b0["id"], "w_inicio": 10.0, "w_fin": 10.0, 
+                        "x_inicio": 0.0, "x_fin": round(l_def, 2), "direccion": "-Y"
                     })
                     st.session_state.datos_estructura = datos
                     st.rerun()
@@ -1174,18 +1106,55 @@ with col_inspector:
                 uid = f"cd_{idx_cd}_{len(cds)}_{v_act}"
                 
                 with st.container(border=True):
-                    if lista_barras:
-                        curr_b = cds[idx_cd].get("barra", lista_barras[0])
-                        idx_b = lista_barras.index(curr_b) if curr_b in lista_barras else 0
-                        cds[idx_cd]["barra"] = st.selectbox("Barra destino:", lista_barras, index=idx_b, key=f"b_{uid}")
+                    nodos_d = {n["id"]: (float(n["x"]), float(n["y"])) for n in datos.get("nodos", [])}
+                    barras_dict = {b["id"]: b for b in datos.get("barras", [])}
+
+                    modo_ubic_cd = st.radio("Definir ubicación por:", ["De Nudo a Nudo (Vano)", "Por Barra y Distancias [x₁, x₂]"], horizontal=True, key=f"modoubic_{uid}")
+                    
+                    if "Nudo a Nudo" in modo_ubic_cd:
+                        if len(lista_nodos) >= 2:
+                            c_na, c_nb = st.columns(2)
+                            b_curr = barras_dict.get(cds[idx_cd].get("barra", ""))
+                            sug_na = b_curr["nodo_i"] if b_curr and b_curr["nodo_i"] in lista_nodos else lista_nodos[0]
+                            sug_nb = b_curr["nodo_j"] if b_curr and b_curr["nodo_j"] in lista_nodos else lista_nodos[min(1, len(lista_nodos)-1)]
+
+                            idx_na = lista_nodos.index(sug_na) if sug_na in lista_nodos else 0
+                            idx_nb = lista_nodos.index(sug_nb) if sug_nb in lista_nodos else min(1, len(lista_nodos)-1)
+                            
+                            n_a_sel = c_na.selectbox("Desde Nodo:", lista_nodos, index=idx_na, key=f"na_{uid}")
+                            n_b_sel = c_nb.selectbox("Hasta Nodo:", lista_nodos, index=idx_nb, key=f"nb_{uid}")
+                            
+                            barra_encontrada = None
+                            for b_candidata in datos.get("barras", []):
+                                if (b_candidata["nodo_i"] == n_a_sel and b_candidata["nodo_j"] == n_b_sel) or \
+                                   (b_candidata["nodo_i"] == n_b_sel and b_candidata["nodo_j"] == n_a_sel):
+                                    barra_encontrada = b_candidata["id"]
+                                    break
+                            
+                            if barra_encontrada:
+                                cds[idx_cd]["barra"] = barra_encontrada
+                                xi, yi = nodos_d[n_a_sel]
+                                xj, yj = nodos_d[n_b_sel]
+                                L_tramo = math.hypot(xj - xi, yj - yi)
+                                cds[idx_cd]["x_inicio"] = 0.0
+                                cds[idx_cd]["x_fin"] = round(L_tramo, 3)
+                            else:
+                                st.warning(f"No existe una barra que una {n_a_sel} con {n_b_sel}.")
+                        else:
+                            st.info("Se necesitan al menos dos nodos creados.")
+                    else:
+                        if lista_barras:
+                            curr_b = cds[idx_cd].get("barra", lista_barras[0])
+                            idx_b = lista_barras.index(curr_b) if curr_b in lista_barras else 0
+                            cds[idx_cd]["barra"] = st.selectbox("Barra destino:", lista_barras, index=idx_b, key=f"b_{uid}")
+
+                        c_x1, c_x2 = st.columns(2)
+                        cds[idx_cd]["x_inicio"] = c_x1.number_input("x inicio local (m):", value=float(cds[idx_cd].get("x_inicio", 0.0)), step=0.5, key=f"x1_{uid}")
+                        cds[idx_cd]["x_fin"] = c_x2.number_input("x fin local (m):", value=float(cds[idx_cd].get("x_fin", 5.0)), step=0.5, key=f"x2_{uid}")
 
                     c_w1, c_w2 = st.columns(2)
                     cds[idx_cd]["w_inicio"] = c_w1.number_input(f"w inicio ({datos.get('unidad_fuerza', 'kN')}/m)", value=float(cds[idx_cd].get("w_inicio", 10.0)), step=1.0, key=f"w1_{uid}")
                     cds[idx_cd]["w_fin"] = c_w2.number_input(f"w fin ({datos.get('unidad_fuerza', 'kN')}/m)", value=float(cds[idx_cd].get("w_fin", 10.0)), step=1.0, key=f"w2_{uid}")
-                    
-                    c_x1, c_x2 = st.columns(2)
-                    cds[idx_cd]["x_inicio"] = c_x1.number_input("x inicio (m)", value=float(cds[idx_cd].get("x_inicio", 0.0)), step=0.5, key=f"x1_{uid}")
-                    cds[idx_cd]["x_fin"] = c_x2.number_input("x fin (m)", value=float(cds[idx_cd].get("x_fin", 5.0)), step=0.5, key=f"x2_{uid}")
                     
                     dirs = ["-Y", "+Y", "-X", "+X", "perpendicular_adentro", "perpendicular_afuera"]
                     curr_dir = cds[idx_cd].get("direccion", "-Y")
@@ -1269,7 +1238,6 @@ with col_inspector:
                         elif "derecha" in sent_sel and "abajo" in sent_sel: cps[idx_cp]["sentido"] = "abajo_derecha"
                         elif "derecha" in sent_sel and "arriba" in sent_sel: cps[idx_cp]["sentido"] = "arriba_derecha"
                         elif "izquierda" in sent_sel and "arriba" in sent_sel: cps[idx_cp]["sentido"] = "arriba_izquierda"
-                        
                     else:
                         dirs = ["-Y", "+Y", "-X", "+X"]
                         curr_dir = cps[idx_cp].get("direccion", "-Y")
@@ -1322,7 +1290,6 @@ with col_inspector:
                             mcs[idx_mc]["nodo"] = st.selectbox("Nodo destino:", lista_nodos, index=idx_n, key=f"n_{uid}")
 
                     mcs[idx_mc]["magnitud"] = st.number_input(f"Magnitud ({datos.get('unidad_fuerza', 'kN')}·m):", value=float(mcs[idx_mc].get("magnitud", 10.0)), step=1.0, key=f"m_{uid}")
-                    
                     curr_sentido = mcs[idx_mc].get("sentido", "horario").lower()
                     idx_s = 0 if curr_sentido == "horario" else 1
                     mcs[idx_mc]["sentido"] = st.selectbox("Sentido de Giro:", ["horario", "antihorario"], index=idx_s, key=f"s_{uid}")
@@ -1345,7 +1312,7 @@ with col_inspector:
 # Canvas
 with col_canvas:
     st.markdown("#### 📐 Vista Previa del Modelo")
-    st.plotly_chart(crear_esquema_modelo(st.session_state.datos_estructura), use_container_width=True)
+    st.plotly_chart(crear_esquema_modelo(st.session_state.datos_estructura), use_container_width=True, config=config_canvas)
 
 # ==========================================================
 # MOTOR DE CÁLCULO (PYNITE) CON BLINDAJE CINEMÁTICO
@@ -1479,9 +1446,9 @@ def resolver_modelo(datos):
     return modelo, factor_fuerza
 
 # ==========================================================
-# DIAGRAMAS INTERACTIVOS (M, Q, N)
+# DIAGRAMAS INTERACTIVOS (M, Q, N) CON SONDA VISUAL
 # ==========================================================
-def construir_diagrama_plotly(modelo, datos, tipo_diagrama, factor_fuerza):
+def construir_diagrama_plotly(modelo, datos, tipo_diagrama, factor_fuerza, punto_sonda=None):
     unidad_f = datos.get("unidad_fuerza", "kN")
     unidad_m = f"{unidad_f}·m"
     
@@ -1499,12 +1466,7 @@ def construir_diagrama_plotly(modelo, datos, tipo_diagrama, factor_fuerza):
     xs = [float(getattr(n, 'X', getattr(n, 'x', 0))) for k, n in modelo.nodes.items() if not k.startswith("gnd_")]
     ys = [float(getattr(n, 'Y', getattr(n, 'y', 0))) for k, n in modelo.nodes.items() if not k.startswith("gnd_")]
     L_max = max(max(xs) - min(xs), max(ys) - min(ys), 1.0)
-
     pad = 0.25 * L_max
-    fig.add_trace(go.Scatter(
-        x=[min(xs) - pad, max(xs) + pad], y=[min(ys) - pad, max(ys) + pad],
-        mode='markers', marker=dict(size=0.1, opacity=0), hoverinfo='skip', showlegend=False
-    ))
 
     max_val = 1.0
     for m in miembros_reales.values():
@@ -1594,12 +1556,51 @@ def construir_diagrama_plotly(modelo, datos, tipo_diagrama, factor_fuerza):
                 hoverinfo='skip', showlegend=False
             ))
 
+    if punto_sonda and punto_sonda.get("barra") in miembros_reales:
+        b_s = miembros_reales[punto_sonda["barra"]]
+        ni_s = b_s.i_node if not isinstance(b_s.i_node, str) else modelo.nodes[b_s.i_node]
+        nj_s = b_s.j_node if not isinstance(b_s.j_node, str) else modelo.nodes[b_s.j_node]
+        xi_s, yi_s = float(getattr(ni_s, 'X', getattr(ni_s, 'x', 0))), float(getattr(ni_s, 'Y', getattr(ni_s, 'y', 0)))
+        xj_s, yj_s = float(getattr(nj_s, 'X', getattr(nj_s, 'x', 0))), float(getattr(nj_s, 'Y', getattr(nj_s, 'y', 0)))
+        
+        L_bs = b_s.L()
+        if L_bs >= 1e-4:
+            c_t, s_t = (xj_s - xi_s) / L_bs, (yj_s - yi_s) / L_bs
+            nx_s, ny_s = -s_t, c_t
+            x_s_loc = punto_sonda["x_loc"]
+            
+            x_b_pt = xi_s + x_s_loc * c_t
+            y_b_pt = yi_s + x_s_loc * s_t
+            
+            val_s = punto_sonda.get(tipo_diagrama, 0.0)
+            x_d_pt = x_b_pt + (val_s * escala) * nx_s
+            y_d_pt = y_b_pt + (val_s * escala) * ny_s
+            
+            fig.add_trace(go.Scatter(
+                x=[x_b_pt, x_d_pt], y=[y_b_pt, y_d_pt],
+                mode='lines+markers',
+                line=dict(color='#facc15', width=3, dash='dot'),
+                marker=dict(size=8, color='#facc15'),
+                name='Punto', hoverinfo='skip'
+            ))
+            
+            fig.add_annotation(
+                x=x_d_pt, y=y_d_pt,
+                text=f"<b>{val_s:.2f} {un_txt}</b>",
+                showarrow=True, arrowhead=2, arrowsize=1.2, arrowcolor="#facc15",
+                font=dict(color="#0f172a", size=11, family="JetBrains Mono"),
+                bgcolor="#facc15", bordercolor="#ffffff", borderwidth=1, borderpad=3
+            )
+
     fig.update_layout(
         title=f"<b>{titulo_diag}</b>",
         paper_bgcolor="#0f172a", plot_bgcolor="#0f172a",
         font=dict(color="#e2e8f0"),
-        xaxis=dict(showgrid=True, gridcolor="#1e293b", scaleanchor="y", scaleratio=1),
-        yaxis=dict(showgrid=True, gridcolor="#1e293b"),
+        dragmode="pan",
+        uirevision="fijo",
+        transition={'duration': 0},
+        xaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, range=[min(xs) - pad, max(xs) + pad], fixedrange=False),
+        yaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, scaleanchor="x", scaleratio=1, range=[min(ys) - pad, max(ys) + pad], fixedrange=False),
         margin=dict(l=20, r=20, t=50, b=20),
         height=520, showlegend=False
     )
@@ -1625,12 +1626,7 @@ def construir_diagrama_reacciones(modelo, datos, factor_fuerza):
     xs = [float(getattr(n, 'X', getattr(n, 'x', 0))) for k, n in modelo.nodes.items() if not k.startswith("gnd_")]
     ys = [float(getattr(n, 'Y', getattr(n, 'y', 0))) for k, n in modelo.nodes.items() if not k.startswith("gnd_")]
     L_max = max(max(xs) - min(xs), max(ys) - min(ys), 1.0)
-
     pad = 0.35 * L_max
-    fig.add_trace(go.Scatter(
-        x=[min(xs) - pad, max(xs) + pad], y=[min(ys) - pad, max(ys) + pad],
-        mode='markers', marker=dict(size=0.1, opacity=0), hoverinfo='skip', showlegend=False
-    ))
 
     for m in miembros_reales.values():
         ni = m.i_node if not isinstance(m.i_node, str) else modelo.nodes[m.i_node]
@@ -1717,8 +1713,11 @@ def construir_diagrama_reacciones(modelo, datos, factor_fuerza):
         title="<b>Vectores Reactivos en Apoyos (Reacciones de Vínculo)</b>",
         paper_bgcolor="#0f172a", plot_bgcolor="#0f172a",
         font=dict(color="#e2e8f0"),
-        xaxis=dict(showgrid=True, gridcolor="#1e293b", scaleanchor="y", scaleratio=1),
-        yaxis=dict(showgrid=True, gridcolor="#1e293b"),
+        dragmode="pan",
+        uirevision="fijo",
+        transition={'duration': 0},
+        xaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, range=[min(xs) - pad, max(xs) + pad], fixedrange=False),
+        yaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, scaleanchor="x", scaleratio=1, range=[min(ys) - pad, max(ys) + pad], fixedrange=False),
         margin=dict(l=20, r=20, t=50, b=20),
         height=520, showlegend=False
     )
@@ -1746,6 +1745,7 @@ def construir_deformada_plotly(modelo, datos):
     xs = [x for x, y in nodos_dict.values()]
     ys = [y for x, y in nodos_dict.values()]
     L_max = max(max(xs) - min(xs), max(ys) - min(ys), 1.0)
+    pad = 0.30 * L_max
 
     datos_deformada = []
     max_disp_global = 1e-9
@@ -1788,12 +1788,6 @@ def construir_deformada_plotly(modelo, datos):
         })
 
     escala_def = (0.12 * L_max) / max_disp_global if max_disp_global > 1e-9 else 1.0
-
-    pad = 0.30 * L_max
-    fig.add_trace(go.Scatter(
-        x=[min(xs) - pad, max(xs) + pad], y=[min(ys) - pad, max(ys) + pad],
-        mode='markers', marker=dict(size=0.1, opacity=0), hoverinfo='skip', showlegend=False
-    ))
 
     for elem in datos_deformada:
         fig.add_trace(go.Scatter(
@@ -1839,14 +1833,17 @@ def construir_deformada_plotly(modelo, datos):
         title="<b>Deformada Elástica Continua (Escala Amplificada)</b>",
         paper_bgcolor="#0f172a", plot_bgcolor="#0f172a",
         font=dict(color="#e2e8f0"),
-        xaxis=dict(showgrid=True, gridcolor="#1e293b", scaleanchor="y", scaleratio=1),
-        yaxis=dict(showgrid=True, gridcolor="#1e293b"),
+        dragmode="pan",
+        uirevision="fijo",
+        transition={'duration': 0},
+        xaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, range=[min(xs) - pad, max(xs) + pad], fixedrange=False),
+        yaxis=dict(showgrid=True, gridcolor="#1e293b", zeroline=False, scaleanchor="x", scaleratio=1, range=[min(ys) - pad, max(ys) + pad], fixedrange=False),
         margin=dict(l=20, r=20, t=50, b=20), height=520, showlegend=False
     )
     return fig
 
 # ==========================================================
-# SECCIÓN 3: CÁLCULO Y RESULTADOS
+# SECCIÓN 3: CÁLCULO, DIAGRAMAS Y EVALUACIÓN PUNTUAL
 # ==========================================================
 st.markdown("---")
 st.markdown('<div class="step-badge">3. Solución y Diagramas de Esfuerzos</div>', unsafe_allow_html=True)
@@ -1896,6 +1893,66 @@ if btn_ejecutar or "modelo_calculado" in st.session_state:
 
                 st.markdown("<br>", unsafe_allow_html=True)
 
+                # Coordenadas por defecto para el evaluador puntual
+                xs_tot = [float(getattr(n, 'X', getattr(n, 'x', 0))) for k, n in modelo_resuelto.nodes.items() if not k.startswith("gnd_")]
+                ys_tot = [float(getattr(n, 'Y', getattr(n, 'y', 0))) for k, n in modelo_resuelto.nodes.items() if not k.startswith("gnd_")]
+                def_x_sonda = round((min(xs_tot) + max(xs_tot)) / 2, 2) if xs_tot else 0.0
+                def_y_sonda = round((min(ys_tot) + max(ys_tot)) / 2, 2) if ys_tot else 0.0
+
+                sonda_x_val = st.session_state.get("input_sonda_x", float(def_x_sonda))
+                sonda_y_val = st.session_state.get("input_sonda_y", float(def_y_sonda))
+
+                # Proyección ortogonal para hallar barra y esfuerzos
+                mejor_dist = float('inf')
+                mejor_barra = None
+                mejor_s = 0.0
+                punto_sonda_info = None
+
+                for m_cand in miembros_reales:
+                    ni = m_cand.i_node if not isinstance(m_cand.i_node, str) else modelo_resuelto.nodes[m_cand.i_node]
+                    nj = m_cand.j_node if not isinstance(m_cand.j_node, str) else modelo_resuelto.nodes[m_cand.j_node]
+                    x_i, y_i = float(getattr(ni, 'X', getattr(ni, 'x', 0))), float(getattr(ni, 'Y', getattr(ni, 'y', 0)))
+                    x_j, y_j = float(getattr(nj, 'X', getattr(nj, 'x', 0))), float(getattr(nj, 'Y', getattr(nj, 'y', 0)))
+                    
+                    dx_b, dy_b = x_j - x_i, y_j - y_i
+                    L_b = math.hypot(dx_b, dy_b)
+                    if L_b < 1e-4: continue
+                    
+                    s_proj = ((sonda_x_val - x_i) * dx_b + (sonda_y_val - y_i) * dy_b) / L_b
+                    s_clamp = max(0.0, min(L_b, s_proj))
+                    
+                    xp = x_i + s_clamp * (dx_b / L_b)
+                    yp = y_i + s_clamp * (dy_b / L_b)
+                    d_pt = math.hypot(sonda_x_val - xp, sonda_y_val - yp)
+                    
+                    if d_pt < mejor_dist:
+                        mejor_dist = d_pt
+                        mejor_barra = m_cand
+                        mejor_s = s_clamp
+
+                if mejor_barra is not None:
+                    x_arr_m, m_arr = mejor_barra.moment_array("Mz", n_points=500)
+                    sonda_M = float(np.interp(mejor_s, x_arr_m, m_arr)) / factor_fuerza
+                    
+                    x_arr_q, q_arr = mejor_barra.shear_array("Fy", n_points=500)
+                    sonda_Q = float(np.interp(mejor_s, x_arr_q, q_arr)) / factor_fuerza
+                    
+                    x_arr_n, n_arr = mejor_barra.axial_array(n_points=500)
+                    sonda_N = float(np.interp(mejor_s, x_arr_n, n_arr)) / factor_fuerza
+
+                    x_arr_d, d_arr = mejor_barra.deflection_array("dy", n_points=500)
+                    sonda_delta = float(np.interp(mejor_s, x_arr_d, d_arr)) * 1000.0
+
+                    punto_sonda_info = {
+                        "barra": mejor_barra.name,
+                        "x_loc": mejor_s,
+                        "M": sonda_M,
+                        "Q": sonda_Q,
+                        "N": sonda_N,
+                        "delta": sonda_delta
+                    }
+
+                # Pestañas de diagramas (renderizadas arriba)
                 tab_m, tab_q, tab_n, tab_def, tab_reac = st.tabs([
                     "🔴 Momento Flector (M)",
                     "🔵 Esfuerzo de Corte (Q)",
@@ -1905,15 +1962,36 @@ if btn_ejecutar or "modelo_calculado" in st.session_state:
                 ])
 
                 with tab_m:
-                    st.plotly_chart(construir_diagrama_plotly(modelo_resuelto, datos, "M", factor_fuerza), use_container_width=True)
+                    st.plotly_chart(construir_diagrama_plotly(modelo_resuelto, datos, "M", factor_fuerza, punto_sonda_info), use_container_width=True, config=config_canvas)
                 with tab_q:
-                    st.plotly_chart(construir_diagrama_plotly(modelo_resuelto, datos, "Q", factor_fuerza), use_container_width=True)
+                    st.plotly_chart(construir_diagrama_plotly(modelo_resuelto, datos, "Q", factor_fuerza, punto_sonda_info), use_container_width=True, config=config_canvas)
                 with tab_n:
-                    st.plotly_chart(construir_diagrama_plotly(modelo_resuelto, datos, "N", factor_fuerza), use_container_width=True)
+                    st.plotly_chart(construir_diagrama_plotly(modelo_resuelto, datos, "N", factor_fuerza, punto_sonda_info), use_container_width=True, config=config_canvas)
                 with tab_def:
-                    st.plotly_chart(construir_deformada_plotly(modelo_resuelto, datos), use_container_width=True)
+                    st.plotly_chart(construir_deformada_plotly(modelo_resuelto, datos), use_container_width=True, config=config_canvas)
                 with tab_reac:
-                    st.plotly_chart(construir_diagrama_reacciones(modelo_resuelto, datos, factor_fuerza), use_container_width=True)
+                    st.plotly_chart(construir_diagrama_reacciones(modelo_resuelto, datos, factor_fuerza), use_container_width=True, config=config_canvas)
+
+                st.markdown("<br>", unsafe_allow_html=True)
+
+                # ==========================================================
+                # CALCULA LOS ESFUERZOS EN UN PUNTO (UBICADO ABAJO)
+                # ==========================================================
+                with st.container(border=True):
+                    st.markdown("##### Calcula los esfuerzos en un punto de la estructura")
+                    c_s1, c_s2, c_s3 = st.columns([1.2, 1.2, 3.6])
+                    with c_s1:
+                        st.number_input("Coordenada X (m):", value=float(sonda_x_val), step=0.25, format="%.2f", key="input_sonda_x")
+                    with c_s2:
+                        st.number_input("Coordenada Y (m):", value=float(sonda_y_val), step=0.25, format="%.2f", key="input_sonda_y")
+
+                    with c_s3:
+                        if punto_sonda_info is not None:
+                            sc1, sc2, sc3, sc4 = st.columns(4)
+                            sc1.metric("Flector M", f"{punto_sonda_info['M']:.2f} {unidad_m}")
+                            sc2.metric("Corte Q", f"{punto_sonda_info['Q']:.2f} {unidad_f}")
+                            sc3.metric("Normal N", f"{punto_sonda_info['N']:.2f} {unidad_f}")
+                            sc4.metric("Flecha δ", f"{punto_sonda_info['delta']:.3f} mm")
 
             except Exception as e:
                 err_msg = str(e).lower()
